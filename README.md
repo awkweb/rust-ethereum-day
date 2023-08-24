@@ -16,11 +16,24 @@ Install and build dependencies:
 pnpm install
 ```
 
-Run dev server:
+Run dev server on [http://localhost:5173](http://localhost:5173):
 
 ```bash
 pnpm dev
 ```
+
+## Scripts
+
+| Command           | Description                     |
+| ----------------- | ------------------------------- |
+| `pnpm dev`        | Run dev server                  |
+| `pnpm build`      | Build playground for production |
+| `pnpm build:wasm` | Build wasm-wallet package       |
+| `pnpm clean`      | Clean build outputs             |
+| `pnpm format`     | Format code                     |
+| `pnpm lint`       | Lint code                       |
+| `pnpm lint:fix`    | Lint and fix code                |
+| `pnpm preview`    | Preview production build        |
 
 ## Prerequisites
 
