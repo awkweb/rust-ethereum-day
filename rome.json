@@ -1,9 +1,6 @@
 {
   "files": {
-    "ignore": [
-      "pnpm-lock.yaml",
-      "tsconfig.json"
-    ]
+    "ignore": ["pnpm-lock.yaml", "tsconfig.json"]
   },
   "formatter": {
     "enabled": true,
