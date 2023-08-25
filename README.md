@@ -1,22 +1,22 @@
 # Rust Ethereum Day
 
-Basic WASM wallet using TypeScript types and Rust runtime implementation.
+Basic WASM wallet demo using TypeScript and Rust for [Rust Ethereum Day 2023](https://twitter.com/gakonst/status/1678536408238112769).
 
-## Setup
+## Dev
 
-Install [wasm-pack](https://rustwasm.github.io/docs/wasm-pack):
+Install [wasm-pack](https://rustwasm.github.io/docs/wasm-pack)
 
 ```bash
 cargo install wasm-pack
 ```
 
-Install and build dependencies:
+Install and build dependencies
 
 ```bash
 pnpm install
 ```
 
-Run dev server on [http://localhost:5173](http://localhost:5173):
+Run dev server on [http://localhost:5173](http://localhost:5173)
 
 ```bash
 pnpm dev
