@@ -2,6 +2,8 @@
 
 Basic WASM wallet demo using TypeScript and Rust for [Rust Ethereum Day 2023](https://twitter.com/gakonst/status/1678536408238112769).
 
+s/o to [@jxom](https://github.com/jxom) for kicking off the Rust code.
+
 ## Dev
 
 Install [wasm-pack](https://rustwasm.github.io/docs/wasm-pack)
