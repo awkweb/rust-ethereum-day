@@ -1,14 +1,16 @@
 import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts'
 import { Account } from 'wasm-wallet'
 
-export async function sign_wasm() {
+export async function sign_wasm(element: HTMLElement) {
+  element.innerHTML = ''
   console.time('wasm')
+  const start = window.performance.now()
 
   const account = Account.generateRandom()
   const address = account.getAddress()
   console.log({ address })
 
-  const signature = await account.signTypedData({
+  await account.signTypedData({
     domain: {
       name: 'Ether Mail',
       version: '0x1',
@@ -40,13 +42,17 @@ export async function sign_wasm() {
     },
   })
 
-  console.log({ signature })
-
   console.timeEnd('wasm')
+
+  const end = window.performance.now()
+  const time = end - start
+  element.innerHTML = `${time}ms`
 }
 
-export async function sign_viem() {
+export async function sign_viem(element: HTMLElement) {
+  element.innerHTML = ''
   console.time('viem')
+  const start = window.performance.now()
 
   const privateKey = generatePrivateKey()
   const account = privateKeyToAccount(privateKey)
@@ -54,7 +60,7 @@ export async function sign_viem() {
   const address = account.address
   console.log({ address })
 
-  const signature = await account.signTypedData({
+  await account.signTypedData({
     domain: {
       name: 'Ether Mail',
       version: '0x1',
@@ -86,7 +92,9 @@ export async function sign_viem() {
     },
   })
 
-  console.log({ signature })
-
   console.timeEnd('viem')
+
+  const end = window.performance.now()
+  const time = end - start
+  element.innerHTML = `${time}ms`
 }
