@@ -6,14 +6,14 @@
     "#*": "./playground/*"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "pnpm build:wasm && tsc && vite build",
+    "dev": "pnpm build:wasm && vite",
+    "build": "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && source \"$HOME/.cargo/env\" && curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh -s -- -y && pnpm build:wasm && tsc && vite build",
     "build:wasm": "wasm-pack build wasm-wallet/ --target bundler && cp wasm-wallet/src/types.d.ts wasm-wallet/pkg/wasm_wallet.d.ts",
     "clean": "rimraf wasm-wallet/pkg",
     "format": "rome format . --write",
     "lint": "rome check .",
     "lint:fix": "pnpm lint --apply",
-    "preinstall": "npx only-allow@1.1.1 pnpm && pnpm build:wasm",
+    "preinstall": "npx only-allow@1.1.1 pnpm",
     "prepare": "pnpm simple-git-hooks",
     "preview": "vite preview"
   },

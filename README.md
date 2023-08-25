@@ -22,6 +22,11 @@ Run dev server on [http://localhost:5173](http://localhost:5173):
 pnpm dev
 ```
 
+## Prerequisites
+
+- [pnpm](https://pnpm.io)
+- [rustup](https://rustup.rs)
+
 ## Scripts
 
 | Command           | Description                     |
@@ -34,8 +39,3 @@ pnpm dev
 | `pnpm lint`       | Lint code                       |
 | `pnpm lint:fix`    | Lint and fix code                |
 | `pnpm preview`    | Preview production build        |
-
-## Prerequisites
-
-- [pnpm](https://pnpm.io)
-- [rustup](https://rustup.rs)

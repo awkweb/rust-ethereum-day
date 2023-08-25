@@ -3,7 +3,7 @@ import { sign_viem, sign_wasm } from '#utils'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
-    <h1>rust v typescript</h1>
+    <h1>rust v typescript 😈</h1>
     <div>
       <button id="sign_wasm" type="button">sign wasm</button>
       <button id="sign_viem" type="button">sign viem</button>
