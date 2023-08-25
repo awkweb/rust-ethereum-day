@@ -14,6 +14,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <div id="res_viem"></div>
       </div>
     </div>
+    <div style="position:absolute;left:1.25rem;bottom:1rem;">
+      <a style="color:gray;font-size:0.8rem;text-decoration:none;" href="https://github.com/tmm/rust-ethereum-day" target="_blank">View Source</a>
+    </div>
   </div>
 `
 
