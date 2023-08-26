@@ -70,14 +70,6 @@ impl Account {
   }
 }
 
-#[derive(Serialize, Deserialize)]
-pub struct MnemonicOptions {
-  #[serde(skip_serializing_if = "Option::is_none")]
-  index: Option<u32>,
-  #[serde(skip_serializing_if = "Option::is_none")]
-  password: Option<String>,
-}
-
 #[wasm_bindgen]
 impl Account {
   #[wasm_bindgen(js_name = generateRandom)]
@@ -113,4 +105,12 @@ impl Account {
     let wallet = builder.build().unwrap();
     Ok(Account { wallet })
   }
+}
+
+#[derive(Serialize, Deserialize)]
+pub struct MnemonicOptions {
+  #[serde(skip_serializing_if = "Option::is_none")]
+  index: Option<u32>,
+  #[serde(skip_serializing_if = "Option::is_none")]
+  password: Option<String>,
 }

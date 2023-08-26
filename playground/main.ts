@@ -3,14 +3,14 @@ import { sign_viem, sign_wasm } from '#utils'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
-    <h1>rust v typescript 🦀</h1>
+    <h1>rust v typescript</h1>
     <div style="display:flex;gap:0.5rem;">
       <div>
-        <button id="sign_wasm" type="button">sign wasm</button>
+        <button id="sign_wasm" type="button">ethers-rs wasm</button>
         <div id="res_wasm"></div>
       </div>
       <div>
-        <button id="sign_viem" type="button">sign viem</button>
+        <button id="sign_viem" type="button">viem secp256k1</button>
         <div id="res_viem"></div>
       </div>
     </div>
